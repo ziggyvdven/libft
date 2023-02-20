@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+         #
+#    By: zvandeven <zvandeven@student.42.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 13:45:36 by zvandeven         #+#    #+#              #
-#    Updated: 2023/02/17 13:11:30 by zvan-de-         ###   ########.fr        #
+#    Updated: 2023/02/19 22:44:08 by zvandeven        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,8 @@ ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c \
 ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c\
 ft_atoi.c ft_strdup.c ft_substr.c ft_calloc.c\
 ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c\
+ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c\
+ft_putendl_fd.c ft_putnbr_fd.c \
 
 
 $(NAME): libft.h
