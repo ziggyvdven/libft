@@ -6,17 +6,20 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 11:34:06 by zvan-de-          #+#    #+#             */
-/*   Updated: 2023/02/17 14:38:12 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/02/21 14:13:07 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include "ft_calloc.c"
 
 int	ft_len(long int n)
 {
 	int	len;
 
 	len = 0;
+	if (n == 0)
+		return (1);
 	if (n < 0)
 	{
 		n *= -1;
@@ -32,13 +35,13 @@ int	ft_len(long int n)
 
 char	*ft_itoa(int n)
 {
-	char	*ptr;
-	int		len;
-	long	temp;
+	char		*ptr;
+	int			len;
+	long int	temp;
 
 	temp = n;
 	len = ft_len(temp);
-	ptr = (char *)calloc(sizeof(char), (len + 1));
+	ptr = (char *)ft_calloc(sizeof(char), (len + 1));
 	if (!(ptr))
 		return (NULL);
 	ptr[len--] = '\0';
@@ -62,6 +65,6 @@ char	*ft_itoa(int n)
 // {
 // 	int i;
 
-// 	i = -100;
+// 	i = 0;
 // 	printf("%s" ,ft_itoa(i));
 // }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zvandeven <zvandeven@student.42.fr>        +#+  +:+       +#+        */
+/*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:15:28 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/20 14:32:42 by zvandeven        ###   ########.fr       */
+/*   Updated: 2023/02/21 15:34:54 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ int	ft_strcount(char const *str, char c)
 
 	count = 0;
 	i = 0;
+	if (!str || !*str)
+		return (0);
 	while (str[i] != '\0')
 	{
 		if ((str[i + 1] == c || str[i + 1] == '\0')
@@ -28,16 +30,15 @@ int	ft_strcount(char const *str, char c)
 		i++;
 	}
 	return (count);
-
 }
 
 char	*ft_strmake(char const *s, unsigned int start, unsigned int end)
 {
-	unsigned int	i;
-	char			*str;
+	int		i;
+	char	*str;
 
 	i = 0;
-	str = (char *)ft_calloc(sizeof(char), ((end - start) + 1));
+	str = (char *)ft_calloc(sizeof(char), (end - start + 1));
 	if (!(str))
 		return (0);
 	while (start < end && s)
@@ -45,7 +46,6 @@ char	*ft_strmake(char const *s, unsigned int start, unsigned int end)
 	str[i] = '\0';
 	return (str);
 }
-
 
 char	**ft_split(char const *s, char c)
 {
@@ -78,7 +78,7 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char	*str = "hello there, general kenobi";
+// 	char	*str = "hello!fdhhd";
 // 	char	**arr;
 // 	char	sep = ' ';
 // 	int		i;
@@ -86,7 +86,7 @@ char	**ft_split(char const *s, char c)
 // 	arr = ft_split(str, sep);
 // 	if (arr == NULL)
 // 	{
-// 		printf("Error: ft_split returned NULL\n");
+// 		printf("ft_split returned NULL\n");
 // 		return (1);
 // 	}
 // 	i = 0;

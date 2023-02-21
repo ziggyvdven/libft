@@ -3,24 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zvandeven <zvandeven@student.42.fr>        +#+  +:+       +#+        */
+/*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:20:09 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/19 21:57:13 by zvandeven        ###   ########.fr       */
+/*   Updated: 2023/02/21 10:55:59 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "ft_calloc.c"
-#include "ft_strlen.c"
+// #include "ft_calloc.c"
+// #include "ft_strlen.c"
 
-char test_toupper(unsigned int i, char str)
-{
-	(void)i;
-	if (str >= 97 && str <= 122)
-		str -= 32;
-	return (str);
-}
+// char test_toupper(unsigned int i, char str)
+// {
+// 	(void)i;
+// 	if (str >= 97 && str <= 122)
+// 		str -= 32;
+// 	return (str);
+// }
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -40,9 +40,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (ptr);
 }
 
-int main()
-{
-	char str[10] = "hi there!";;
- 	printf("%s\n", ft_strmapi(str, test_toupper));
- 	return 0;
-}
+// int main()
+// {
+// 	char str[10] = "hi there!";;
+//  	printf("%s\n", ft_strmapi(str, test_toupper));
+//  	return 0;
+// }

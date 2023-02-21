@@ -6,15 +6,15 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 11:40:53 by zvan-de-          #+#    #+#             */
-/*   Updated: 2023/02/15 10:46:37 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/02/21 15:07:17 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include	"libft.h"
 
-int	ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i] != '\0')
