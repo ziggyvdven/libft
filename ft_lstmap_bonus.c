@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 14:08:36 by zvan-de-          #+#    #+#             */
-/*   Updated: 2023/02/22 17:44:22 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:47:30 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	while (lst != NULL)
 	{
 		if (ptr == NULL)
-		{
 			ptr = ft_lstnew((*f)(lst->content));
-			if (!(ptr))
-			{
-				ft_lstclear(&ptr, del);
-				return (NULL);
-			}
-		}
 		else
 		{
 		new_node = ft_lstnew((*f)(lst->content));
