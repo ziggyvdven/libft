@@ -6,11 +6,10 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:18:45 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/15 16:40:28 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:33:31 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)

@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:15:28 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/22 12:42:45 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/02/22 17:30:38 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,52 @@ char	*ft_strmake(char const *s, unsigned int start, unsigned int end)
 	i = 0;
 	str = (char *)ft_calloc(sizeof(char), (end - start + 1));
 	if (!(str))
-		return (0);
+		return (NULL);
 	while (start < end && s)
 		str[i++] = s[start++];
 	str[i] = '\0';
 	return (str);
+}
+
+void	ft_free(char **ar)
+{
+	size_t	i;
+
+	i = 0;
+	while (ar[i])
+	{
+		free(ar[i]);
+		ar[i] = NULL;
+		i++;
+	}
+	free(ar);
+}
+
+char	**ft_makear(char const*s, char **ar, unsigned int count, char c)
+{
+	unsigned int	i;
+	unsigned int	start;
+	unsigned int	end;
+
+	start = 0;
+	i = 0;
+	while (i < count)
+	{
+		while (s[start] == c)
+			start++;
+		end = start;
+		while (s[end] != c && s[end] != '\0')
+			end++;
+		ar[i] = ft_strmake(s, start, end);
+		if (!(ar[i]))
+		{
+			ft_free((char **)ar);
+			return (NULL);
+		}
+		i++;
+		start = end;
+	}
+	return (ar);
 }
 
 char	**ft_split(char const *s, char c)
@@ -52,33 +93,21 @@ char	**ft_split(char const *s, char c)
 	unsigned int	i;
 	char			**ptr;
 	unsigned int	count;
-	unsigned int	start;
-	unsigned int	end;
 
 	i = 0;
-	start = 0;
 	count = ft_strcount(s, c);
 	ptr = (char **)ft_calloc(sizeof(char *), count + 1);
 	if (!(ptr))
 		return (NULL);
-	while (i < count)
-	{
-		while (s[start] == c)
-			start++;
-		end = start;
-		while (s[end] != c)
-			end++;
-		ptr[i] = ft_strmake(s, start, end);
-		i++;
-		start = end;
-	}
-	ptr[i] = NULL;
+	ptr = ft_makear(s, ptr, count, c);
+	if (!(ptr))
+		return (NULL);
 	return (ptr);
 }
 
 // int	main(void)
 // {
-// 	char	*str = "hello!fdhhd";
+// 	char	*str = "      hello!";
 // 	char	**arr;
 // 	char	sep = ' ';
 // 	int		i;
