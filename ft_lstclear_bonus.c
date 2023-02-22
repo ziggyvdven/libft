@@ -1,42 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/19 21:14:57 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/22 15:52:59 by zvan-de-         ###   ########.fr       */
+/*   Created: 2023/02/22 12:07:11 by zvan-de-          #+#    #+#             */
+/*   Updated: 2023/02/22 12:07:31 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include	"libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	unsigned int	i;
+	t_list	*temp;
 
-	if (!s || !f)
+	if (!*lst || !lst || !del)
 		return ;
-	i = 0;
-	while (s[i] != '\0')
+	while (*lst && lst)
 	{
-		(*f)(i, &s[i]);
-		i++;
+		temp = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = temp;
 	}
+	return ;
 }
-
-// void ft_toupper1(unsigned int i, char *str)
-// {
-// 	(void) i;
-// 	if (*str >= 97 && *str <= 122)
-// 		*str -= 32;
-// }
-
-// int main()
-// {
-//  	char str[] = "hello there";
-// 		ft_striteri(str, ft_toupper1);
-//  	printf("%s\n", str);
-//  	return 0;
-// }

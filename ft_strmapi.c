@@ -6,15 +6,16 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:20:09 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/21 10:55:59 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:43:21 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // #include "ft_calloc.c"
 // #include "ft_strlen.c"
+// #include "ft_toupper.c"
 
-// char test_toupper(unsigned int i, char str)
+// char	test_toupper(unsigned int i, char str)
 // {
 // 	(void)i;
 // 	if (str >= 97 && str <= 122)
@@ -43,6 +44,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // int main()
 // {
 // 	char str[10] = "hi there!";;
-//  	printf("%s\n", ft_strmapi(str, test_toupper));
+//  	printf("%s\n", ft_strmapi(str, ft_toupper));
 //  	return 0;
 // }

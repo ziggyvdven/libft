@@ -6,7 +6,7 @@
 #    By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/14 13:45:36 by zvandeven         #+#    #+#              #
-#    Updated: 2023/02/21 18:14:34 by zvan-de-         ###   ########.fr        #
+#    Updated: 2023/02/22 15:55:59 by zvan-de-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,9 @@ ft_substr.c ft_strjoin.c ft_strtrim.c ft_itoa.c\
 ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c\
 ft_putendl_fd.c ft_putnbr_fd.c ft_split.c\
 
-SRCBONUS 	= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c\
+SRCBONUS 	= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c\
+ft_lstlast_bonus.c ft_lstdelone_bonus.c ft_lstadd_back_bonus.c ft_lstiter_bonus.c\
+ft_lstmap_bonus.c ft_lstclear_bonus.c\
 
 all: $(NAME)
 
