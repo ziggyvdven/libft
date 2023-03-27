@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 15:01:09 by zvan-de-          #+#    #+#             */
-/*   Updated: 2023/02/21 14:22:57 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:50:35 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	int			j;
 
 	i = 0;
+	if (!haystack || !needle || !*needle)
+		return ((char *)haystack);
 	if (needle[0] == '\0')
 		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)

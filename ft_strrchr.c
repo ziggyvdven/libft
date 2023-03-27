@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:18:45 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/22 17:33:31 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:49:37 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 
 	i = 0;
 	str = (char *)s;
+	if (!s)
+		return (0);
 	while (*str != '\0')
 	{
 	str++;

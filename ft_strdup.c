@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 10:41:04 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/16 14:55:02 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:52:22 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	len = 0;
+	if (!s)
+		return (NULL);
 	ptr = (char *)s;
 	while (ptr[len] != '\0')
 	len++;

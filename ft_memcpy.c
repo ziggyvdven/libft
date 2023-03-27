@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:05:34 by zvan-de-          #+#    #+#             */
-/*   Updated: 2023/02/16 15:10:19 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:54:26 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	const unsigned char	*ptr1;
 
 	i = 0;
+	if (!dst && !src)
+		return (dst);
 	ptr = dst;
 	ptr1 = src;
-	if (!dst && !src)
-		return (0);
 	while (i < n)
 	{
 		*ptr = *ptr1;

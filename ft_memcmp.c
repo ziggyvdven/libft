@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 13:52:28 by zvan-de-          #+#    #+#             */
-/*   Updated: 2023/02/15 14:06:17 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:54:40 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	unsigned char	*ps2;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (0);
 	ps1 = (unsigned char *)s1;
 	ps2 = (unsigned char *)s2;
 	while (i < n)

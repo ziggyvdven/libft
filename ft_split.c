@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/20 10:15:28 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/22 17:30:38 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:53:01 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strcount(char const *str, char c)
 	while (str[i] != '\0')
 	{
 		if ((str[i + 1] == c || str[i + 1] == '\0')
-			&& !(str[i] == c || str[i] == '\0'))
+			&& !(str[i] == c))
 			count++;
 		i++;
 	}
@@ -95,6 +95,8 @@ char	**ft_split(char const *s, char c)
 	unsigned int	count;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	count = ft_strcount(s, c);
 	ptr = (char **)ft_calloc(sizeof(char *), count + 1);
 	if (!(ptr))
@@ -107,9 +109,9 @@ char	**ft_split(char const *s, char c)
 
 // int	main(void)
 // {
-// 	char	*str = "      hello!";
+// 	char	*str = "\0aaa\0bbb";
 // 	char	**arr;
-// 	char	sep = ' ';
+// 	char	sep = '\0';
 // 	int		i;
 
 // 	arr = ft_split(str, sep);

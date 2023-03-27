@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 10:22:46 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/16 15:22:17 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:56:56 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t		i;
 
 	i = 0;
+	if (nmemb >= SIZE_MAX || size >= SIZE_MAX)
+		return (0);
 	ptr = (char *)malloc(nmemb * size);
 	if (!(ptr))
 		return (NULL);

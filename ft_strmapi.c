@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/19 20:20:09 by zvandeven         #+#    #+#             */
-/*   Updated: 2023/02/22 12:43:21 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/03/09 15:51:27 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*ptr;
 
 	i = 0;
+	if (!s || !f)
+		return (NULL);
 	ptr = (char *)ft_calloc(sizeof(char), ft_strlen(s) + 1);
 	if (!(ptr))
 		return (NULL);

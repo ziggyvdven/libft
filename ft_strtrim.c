@@ -6,7 +6,7 @@
 /*   By: zvan-de- <zvan-de-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 10:09:17 by zvan-de-          #+#    #+#             */
-/*   Updated: 2023/02/22 13:48:01 by zvan-de-         ###   ########.fr       */
+/*   Updated: 2023/02/24 12:06:11 by zvan-de-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {	
-	char	*str;
 	int		start;
 	int		end;
 
@@ -26,7 +25,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	end = ft_strlen(s1) - 1;
 	start = 0;
-	str = (char *) s1;
 	while (ft_strchr(set, s1[start]) && start <= end)
 		start++;
 	if (start > end)
